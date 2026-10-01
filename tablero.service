@@ -1,0 +1,12 @@
+[Unit]
+Description=Tablero de puntuaciones
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/pi/tablero/server.py
+WorkingDirectory=/home/pi/tablero
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target

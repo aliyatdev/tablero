@@ -1,0 +1,100 @@
+{
+  "boards": [
+    {
+      "id": "0d84eefd",
+      "title": "Dany vs Sistema",
+      "players": [
+        {
+          "id": "91b83f42",
+          "name": "Dany",
+          "score": 0
+        },
+        {
+          "id": "1531832b",
+          "name": "Sistema",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "8229552a",
+      "title": "Isaak vs Sistema",
+      "players": [
+        {
+          "id": "f4795fcd",
+          "name": "Isaak",
+          "score": 0
+        },
+        {
+          "id": "48065760",
+          "name": "Sistema",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "a0fc30fe",
+      "title": "Persona 3 vs Sistema",
+      "players": [
+        {
+          "id": "af0103ce",
+          "name": "Persona 3",
+          "score": 0
+        },
+        {
+          "id": "b7207319",
+          "name": "Sistema",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "a611d1cc",
+      "title": "Isaak vs Sistema",
+      "players": [
+        {
+          "id": "d1e2474e",
+          "name": "Isaak",
+          "score": 0
+        },
+        {
+          "id": "d12193e6",
+          "name": "Sistema",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "1ed30290",
+      "title": "yo vs el",
+      "players": [
+        {
+          "id": "78350627",
+          "name": "yo",
+          "score": 0
+        },
+        {
+          "id": "c31e5d50",
+          "name": "el",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "2f244f43",
+      "title": "el vs tu",
+      "players": [
+        {
+          "id": "9c7064f3",
+          "name": "el",
+          "score": 0
+        },
+        {
+          "id": "aab0c12c",
+          "name": "tu",
+          "score": 0
+        }
+      ]
+    }
+  ]
+}

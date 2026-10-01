@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tablero Motbus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Ambient background glow effects -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <div class="app-layout">
+    <!-- Top Bar -->
+    <header class="top-bar">
+      <div class="brand">
+        <div class="brand-badge">⚔️</div>
+        <div class="brand-text">
+          <h1>Tablero Motbus</h1>
+          <p id="boardCountLabel">Cargando marcadores...</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="status-pill" id="liveStatus">
+          <span class="status-dot"></span>
+          <span id="liveText">en vivo</span>
+        </div>
+
+        <button class="btn btn-primary" id="btnNewBoard" onclick="openNewBoardModal()">
+          <span>+</span>
+          <span>Nuevo marcador</span>
+        </button>
+
+        <button class="btn" id="btnResetAll" onclick="resetAllBoards()" title="Poner en 0 todos los marcadores">
+          <span>↺</span>
+          <span>Reiniciar todos</span>
+        </button>
+
+        <button class="btn btn-icon-only" id="btnSoundToggle" onclick="toggleSound()" title="Activar/Silenciar sonido">
+          <span id="soundIcon">🔊</span>
+        </button>
+
+        <button class="btn btn-icon-only" id="btnFullscreen" onclick="toggleFullscreen()" title="Pantalla completa">
+          <span>⛶</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Scoreboards Grid: Fits up to 6 simultaneously -->
+    <main class="grid-container" id="gridContainer" data-count="0"></main>
+  </div>
+
+  <!-- Modal for Creating a New Board -->
+  <div class="modal-backdrop" id="newBoardModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-panel">
+      <h2 class="modal-title" id="modalTitle">Nuevo Marcador</h2>
+      <p class="modal-desc">Crea un nuevo marcador independiente para anotar victorias y derrotas contra el sistema
+        (máximo 6 marcadores simultáneos).</p>
+
+      <form onsubmit="handleCreateBoard(event)">
+        <div class="form-group">
+          <label class="form-label" for="inputPlayerName">Nombre del Jugador</label>
+          <input type="text" id="inputPlayerName" class="form-input" placeholder="ej. Dany, Lucas, Isaak..."
+            maxlength="24" required autofocus>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inputOpponentName">Rival</label>
+          <input type="text" id="inputOpponentName" class="form-input" value="Sistema" maxlength="24" required>
+        </div>
+
+        <div class="modal-buttons">
+          <button type="button" class="btn" onclick="closeNewBoardModal()">Cancelar</button>
+          <button type="submit" class="btn btn-primary" id="btnConfirmCreate">Crear Marcador</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
